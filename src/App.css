@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url('assets/goslings-7959052_640.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.app {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+  padding: 10px;
+  
+}
+
+.listaTarefas {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(246, 246, 244);
+}
+
+.filtrar {
+  background-color: #ebebeb;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.filtrar input {
+  width: 100%;
+  margin-right: 10px;
+  padding: 5px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.filtrar select {
+  background-color: #ebebeb;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+#descricao {
+  height: 20px;
+
+}
+
+select:hover {
+  background-color: #a9a4e7;
+}
+
+.tarefa {
+  background-color: #e1e1e1;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+}
+
+.acoes {
+ width: 150px;
+ padding: 5px;
+}
+
+.botaoConcluir {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: 2px solid #45a049;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botaoRemover {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #de3d0b;
+  border: 2px solid #de3d0b;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+input {
+  width: 90%;
+  margin: 10px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#botaocadastrar {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1c0fd6;
+  border: 2px solid #1c0fd6;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 10%;
+  height: 70%;
+  margin-top: 10px;
+}
+
+.cadastrar {
+  display: flex;
+  justify-content: space-between;
+}
+
+button:active {
+  background-color: #ff008c;
+}
+
+button:hover {
+  background-color: #dbc6d1;
+}
+
+form {
+  width: 100%;
+  display: flex;
+}
+
+ .imagens {
+  display: block;
+}
+
+#imagem {
+  height: 20px;
+}
+
+#button_ordem {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1c0fd6;
+  border: 2px solid #1c0fd6;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 3px;
+}
