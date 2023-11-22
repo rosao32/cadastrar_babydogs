@@ -1,18 +1,29 @@
 // Tarefa.jsx
-
 import React from 'react';
 
-const Tarefa = ({ item, concluirTarefa, removerTarefa }) => {
+const Tarefa = ({ animais, onEncontrado }) => {
   return (
-    <div className={`tarefa ${item.isFinalizado ? 'concluida' : ''}`}>
-      <img src={item.imagem} alt={item.descricao} style={{ width: '150px', height: '150px', borderRadius: '10px' }} />
-      <span>{item.descricao}</span>
-      <div>
-       
-        <button className='botaoRemover' onClick={() => removerTarefa(item.id)}>Animal encontrado</button>
-      </div>
+    <div className="Tarefa">
+      <h2>Lista de Animais</h2>
+      <ul>
+        {animais.map((animal, index) => (
+          <li key={index} className="animalItem">
+            <div className="imagem">
+              {animal.image && <img src={animal.image} alt={`Foto de ${animal.name}`} />}
+            </div>
+            <div className="informacoes">
+              <strong>Nome:</strong> {animal.name}, <strong>Raça:</strong> {animal.breed}, <strong>Local:</strong> {animal.location}
+            </div>
+            <div className="acoes">
+              <button className="botaoConcluir" onClick={() => onEncontrado(index)}>Encontrado</button>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
 
 export default Tarefa;
+
+
