@@ -5,15 +5,15 @@ import React, { useState } from 'react';
 const Cadastrar = ({ addTarefa }) => {
   const [descricao, setDescricao] = useState('');
   const [imagem, setImagem] = useState('');
-  const [local, setlocal] = useState('');
-  const [Raca, setRaca] = useState('');
+  const [local, setLocal] = useState('');
+  const [raca, setRaca] = useState('');
 
   const handleAddTarefa = () => {
-    if (descricao.trim() !== '' && imagem.trim() !== '') {
-      addTarefa(descricao, imagem, local, Raca);
+    if (descricao.trim() !== '' && imagem.trim() !== '' && local.trim() !== '' && raca.trim() !== '') {
+      addTarefa(descricao, imagem, local, raca);
       setDescricao('');
       setImagem('');
-      setlocal('');
+      setListaTarefa('');
       setRaca('');
     }
   };
@@ -28,29 +28,31 @@ const Cadastrar = ({ addTarefa }) => {
         value={descricao}
         onChange={(e) => setDescricao(e.target.value)}
       />
-      <label htmlFor="descricao">Digite o local onde ele foi encontrado</label>
+      <br /><br /><br />
+      <label htmlFor="local">Digite o local onde ele foi encontrado</label>
       <input
         type="text"
         id="local"
         value={local}
-        onChange={(e) => setlocal(e.target.value)}
+        onChange={(e) => setLocal(e.target.value)}
       />
-
-<label htmlFor="descricao">Digite a raça do animal</label>
+<br /><br />
+<label htmlFor="raca">Digite a raça do animal</label>
       <input
         type="text"
-        id="Raca"
-        value={Raca}
+        id="raca"
+        value={raca}
         onChange={(e) => setRaca(e.target.value)}
       />
-      <label className='imagens' htmlFor="imagem">Coloque a foto do seu animalzinho</label>
+      <br /><br />
+      <label htmlFor="imagem">Coloque a foto do seu animalzinho</label>
       <input
         type="text"
         id="imagem"
         value={imagem}
         onChange={(e) => setImagem(e.target.value)}
       />
-      <button id='botaocadastrar' onClick={handleAddTarefa}>Adicionar Tarefa</button>
+      <button id='botaocadastrar' onClick={handleAddTarefa}>Cadastrar animal</button>
     </div>
   );
 };

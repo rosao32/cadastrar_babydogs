@@ -8,10 +8,8 @@ const Tarefa = ({ item, concluirTarefa, removerTarefa }) => {
       <img src={item.imagem} alt={item.descricao} style={{ width: '150px', height: '150px', borderRadius: '10px' }} />
       <span>{item.descricao}</span>
       <div>
-        <button className='botaoConcluir' onClick={() => concluirTarefa(item.id)}>
-          {item.isFinalizado ? 'Desfazer' : 'Concluir'}
-        </button>
-        <button className='botaoRemover' onClick={() => removerTarefa(item.id)}>Remover</button>
+       
+        <button className='botaoRemover' onClick={() => removerTarefa(item.id)}>Animal encontrado</button>
       </div>
     </div>
   );

@@ -13,13 +13,14 @@ function App() {
   ]);
   
 
-  const addTarefa = (listaTarefas, txtDescricao, txtImagem) => {
+  const addTarefa = (listaTarefas, txtDescricao, txtImagem, txtRaca) => {
     const newTarefas = [
       ...listaTarefas,
       {
         id: Math.floor(Math.random() * 1000000),
         descricao: txtDescricao,
         imagem: txtImagem,
+        raca: txtRaca,
         isFinalizado: false,
       },
     ];
@@ -57,7 +58,7 @@ const [sort, setSort] = useState('');
   return (
     <>
     <div className="app">
-      <h1>Lista de tarefas</h1>
+      <h1>Animais Perdidos</h1>
       
       <Cadastrar addTarefa={addTarefa}/>
 
@@ -65,14 +66,14 @@ const [sort, setSort] = useState('');
       <div className='listaTarefas'>
         {
           listaTarefas
-          // .filter((item) => {
-          //   // if(item.descricao.toLowerCase().includes(search.toLowerCase)){
-          //   //   return item;
-          //   // }
-          // })
-          .filter(item => filtrar === "Todos" ? true:
-           filtrar === "Concluidas" ? item.isFinalizado == true: 
-          item.isFinalizado == false)
+           .filter((listaTarefas) => {
+           if(listaTarefas.descricao.toLowerCase().includes(search)){
+            return listaTarefas;
+           }
+           })
+          .filter(listaTarefas => filtrar === "Todos" ? true:
+           filtrar === "Concluidas" ? listaTarefas.isFinalizado == true: 
+          listaTarefas.isFinalizado == false)
           .sort((a, b) => sort === 'Crescente' ? a.descricao.localeCompare(b.descricao) : 
                           sort === 'Decrescente' ? b.descricao.localeCompare(a.descricao) : false)
           .map((item) => (
