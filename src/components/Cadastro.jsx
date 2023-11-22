@@ -1,5 +1,3 @@
-// Cadastrar.jsx
-
 import React, { useState } from 'react';
 
 const Cadastrar = ({ addTarefa }) => {
@@ -13,15 +11,14 @@ const Cadastrar = ({ addTarefa }) => {
       addTarefa(descricao, imagem, local, raca);
       setDescricao('');
       setImagem('');
-      setListaTarefa('');
+      setLocal('');
       setRaca('');
     }
   };
 
   return (
     <div>
-        
-      <label htmlFor="descricao">Digite o nome do Seu animal e sua descrição</label>
+      <label htmlFor="descricao">Digite o nome do seu animal e sua descrição</label>
       <input
         type="text"
         id="descricao"
@@ -36,8 +33,8 @@ const Cadastrar = ({ addTarefa }) => {
         value={local}
         onChange={(e) => setLocal(e.target.value)}
       />
-<br /><br />
-<label htmlFor="raca">Digite a raça do animal</label>
+      <br /><br />
+      <label htmlFor="raca">Digite a raça do animal</label>
       <input
         type="text"
         id="raca"
@@ -58,4 +55,5 @@ const Cadastrar = ({ addTarefa }) => {
 };
 
 export default Cadastrar;
+
 

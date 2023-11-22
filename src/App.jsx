@@ -66,11 +66,12 @@ const [sort, setSort] = useState('');
       <div className='listaTarefas'>
         {
           listaTarefas
-           .filter((listaTarefas) => {
-           if(listaTarefas.descricao.toLowerCase().includes(search)){
-            return listaTarefas;
-           }
-           })
+          .filter((listaTarefas) => {
+            if (listaTarefas.descricao?.toLowerCase().includes(search)) {
+                return listaTarefas;
+            }
+        })
+        
           .filter(listaTarefas => filtrar === "Todos" ? true:
            filtrar === "Concluidas" ? listaTarefas.isFinalizado == true: 
           listaTarefas.isFinalizado == false)
