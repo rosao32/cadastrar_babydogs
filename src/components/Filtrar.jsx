@@ -1,4 +1,3 @@
-// Filtrar.jsx
 import React, { useState } from 'react';
 
 const Filtrar = ({ animais, setAnimais }) => {

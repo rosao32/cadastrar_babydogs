@@ -1,4 +1,3 @@
-// Tarefa.jsx
 import React from 'react';
 
 const Tarefa = ({ animais, onEncontrado }) => {
